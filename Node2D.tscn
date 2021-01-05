@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 505.108, 296.33 )
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 939.439
+margin_top = 558.869
+margin_right = 980.439
+margin_bottom = 578.869
+rect_scale = Vector2( 1.6, 1.4 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer"]
+margin_left = 844.079
+margin_top = 561.159
+margin_right = 927.079
+margin_bottom = 581.159
+rect_scale = Vector2( 0.934474, 1.22373 )
+text = "grid size"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 3.06872
+margin_top = 546.0
+margin_right = 359.069
+margin_bottom = 577.0
+rect_scale = Vector2( 1.51228, 1.41365 )
+size_flags_horizontal = 4
+text = "cntl+LMB: Alive, shift+LMB: Dead, MMB : pan, MMU/D: zoom "
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 765.8
+margin_top = 562.876
+margin_right = 830.8
+margin_bottom = 576.876
+rect_scale = Vector2( 1.31326, 1.64 )
+text = "Grid Size"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
+[connection signal="item_selected" from="CanvasLayer/OptionButton" to="." method="_on_OptionButton_item_selected"]
