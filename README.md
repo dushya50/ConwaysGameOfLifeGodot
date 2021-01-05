@@ -1,2 +1,2 @@
 # ConwaysGameOfLifeGodot
-Conway's game of life on a fiite grid using Godot game engine. 
+Conway's game of life on a finite grid using Godot game engine. 
